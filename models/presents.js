@@ -1,12 +1,12 @@
 module.exports = function (sequelize, DataTypes) {
 
-    var Presents = sequelize.define("Present", {
+    var Presents = sequelize.define("Presents", {
         present_name: DataTypes.STRING,
-        price: DataTypes.INTEGER,
+        price: DataTypes.FLOAT,
         url: DataTypes.STRING
     },
     {
-        tableName: "present"
+        tableName: "presents"
     });
 
     return Presents;
