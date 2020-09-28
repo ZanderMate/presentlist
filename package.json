@@ -18,8 +18,10 @@
   "homepage": "https://github.com/ZanderMate/presentlist#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "fs": "0.0.1-security",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
+    "path": "^0.12.7",
     "sequelize": "^6.3.5"
   }
 }
