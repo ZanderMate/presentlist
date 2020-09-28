@@ -1,4 +1,4 @@
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
 
     var Presents = sequelize.define("Present", {
         present_name: DataTypes.STRING,
@@ -6,9 +6,8 @@ module.exports = function(sequelize, DataTypes) {
         url: DataTypes.STRING
     },
     {
-        tableName: "pokemon"
-    }
-    );
+        tableName: "present"
+    });
 
     return Presents;
 }
