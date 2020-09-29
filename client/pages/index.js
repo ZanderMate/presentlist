@@ -1,15 +1,14 @@
-import Head from 'next/head';
-import styles from '../styles/Home.module.css';
-import Link from 'next/link';
+import Head from 'next/head'
+import Layout, { siteTitle } from '../components/layout'
+import utilStyles from '../styles/utils.module.css'
 
 export default function Home() {
   return (
-    <>
+    <Layout home>
       <Head>
-        <title>Present List</title>
+        <title>{siteTitle}</title>
       </Head>
-      <h1 className={styles.title}>Alex's Present List</h1>
-      <p className={styles.footer}><Link href="/admin/homepage"><a>Admin Page</a></Link></p>
-    </>
+
+    </Layout>
   )
 }
