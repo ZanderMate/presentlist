@@ -2,19 +2,15 @@ import Link from 'next/link';
 
 export default function Navbar() {
     return (
-        < nav class="navbar navbar-expand-lg navbar-dark bg-primary" >
-            <a class="navbar-brand" href="#">Present List</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+        <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+            <Link href="/"><a className="navbar-brand">Present List</a></Link>
+            <button className="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
             </button>
-
-            <div class="collapse navbar-collapse" id="navbarColor01">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <Link href="/"><a class="nav-link">Home <span class="sr-only">(current)</span></a></Link>
-                    </li>
-                    <li class="nav-item active">
-                        <Link href="/admin/homepage"><a class="nav-link">Admin</a></Link>
+            <div className="navbar-collapse collapse" id="navbarColor01">
+                <ul className="navbar-nav ml-auto">
+                    <li className="nav-item active">
+                        <Link href="/admin/homepage"><a className="nav-link">Admin</a></Link>
                     </li>
                 </ul>
             </div>

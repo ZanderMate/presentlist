@@ -1,14 +1,27 @@
-import Head from 'next/head'
-import Layout, { siteTitle } from '../components/layout'
-import utilStyles from '../styles/utils.module.css'
+import React, { useEffect, useState } from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout';
+import styles from '../components/layout.module.css';
+const axios = require('axios');
 
-export default function Home() {
+const Home = props => {
+  const [presentList, setPresentList] = useState([])
+
+  useEffect(() => {
+    axios.get("http://localhost:3001/api/presents/")
+      .then(results => {
+        console.log(results);
+      })
+  }, []);
+
   return (
-    <Layout home>
+    <Layout>
       <Head>
-        <title>{siteTitle}</title>
+        <title>Present List</title>
       </Head>
-
+      <h1 className={styles.title}>A List of Possible Presents for Alex</h1>
     </Layout>
   )
 }
+
+export default Home;

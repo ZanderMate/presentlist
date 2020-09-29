@@ -9,6 +9,7 @@
   height: 6rem;
 }
 
-.backToHome {
-  margin: 3rem 0 0;
+.title {
+  padding-top: 30px;
+  text-align: center;
 }
