@@ -2,8 +2,12 @@ const express = require('express');
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
 const compression = require('compression');
+const cors = require('cors');
+
 
 const app = express();
+app.use(cors());
+
 app.use(compression());
 
 const port = process.env.PORT || 3001;
